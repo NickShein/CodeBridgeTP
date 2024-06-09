@@ -1,0 +1,18 @@
+.container{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 19.5px;
+    text-align: left;
+    color: #373737;
+    margin: 35px 75px;
+}
+hr{
+    margin: 35px 0;
+    border: solid 0.5px #EAEAEA;
+}
+
+@media (max-width: 550px) {
+    .container{
+        margin: 35px 1.5vw;
+    }
+}

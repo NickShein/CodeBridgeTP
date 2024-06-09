@@ -1,0 +1,22 @@
+
+<mat-card class="custom-card">
+
+  <img [src]="imageUrl" alt="Article Picture">
+
+  <div class="date">
+    <mat-icon class="date-icon">date_range</mat-icon>
+
+    <div class="date-text">{{ publishedAt | date }}</div>
+  </div>
+
+  <div class="title" id="title" [innerHTML]="title | highlight : inputValue"></div>
+
+  <div class="article" [innerHTML]="summary | highlight : inputValue"></div>
+
+  <button mat-icon-button (click)="redirectToArticlePage(id)" class="read-more">
+    
+    Read more<mat-icon class="forward-arrow">arrow_forward</mat-icon>
+
+  </button>
+
+</mat-card>

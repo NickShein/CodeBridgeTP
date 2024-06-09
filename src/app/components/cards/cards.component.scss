@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px; 
+    justify-content: space-around;
+    padding-bottom: 65px;
+  }
+  
+  app-article-card {
+    display: flex;
+    flex: 1 0 calc(33.333% - 30px); /* ширина кожного елемента з урахуванням відступів */
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .highlight {
+    background-color: yellow;
+  }
+
+  .card:hover{
+    scale: 1.01;
+  }
+  
+  @media (max-width: 768px) {
+    app-article-card {
+      flex: 1 0 calc(50% - 22.5px); /* адаптуємо ширину для менших екранів */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    
+    app-article-card {
+      flex: 1 0 100%; /* адаптуємо ширину для дуже малих екранів */
+    }
+  }

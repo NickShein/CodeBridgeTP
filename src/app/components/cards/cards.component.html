@@ -1,0 +1,12 @@
+<div class="container">
+    <app-article-card class="card"
+      *ngFor="let article of articles$ | async"
+      [imageUrl]="article.imageUrl"
+      [publishedAt]="article.publishedAt"
+      [title]="article.title"
+      [summary]="article.summary"
+      [id]="article.id"
+      [url]="article.url"
+      [inputValue]="inputValue">
+    </app-article-card>
+  </div>

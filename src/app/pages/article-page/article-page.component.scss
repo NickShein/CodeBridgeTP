@@ -1,0 +1,113 @@
+.container-article{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    height: 245px;
+    width: 100%;
+    position: relative;
+}
+.img-back{
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+}
+
+.header-title{
+    font-family: 'Montserrat';
+    white-space: nowrap;
+    font-size: 1.3vw;
+    font-weight: 400;
+    line-height: 95px;
+    text-align: center;
+    background: white;
+    height: 95px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.article{
+    position: absolute;
+    min-width: 1290px;
+    top: -95px;
+    box-shadow: 0px 8px 24px 0px #0000000D;
+    margin-left: auto;
+    left: 50%;
+    transform: translate(-50%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.spacer {
+    height: 150px;
+    margin: 0 0 -150px 0;
+    background: transparent; 
+    display: flex;
+    align-items: center ;
+}
+
+.article-text{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 19px 75px 50px;
+}
+
+.read-more {
+    display: flex;
+    color: #363636;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 16px 0 0 ;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1320px){
+    .article{
+        min-width: calc(100% - 100px);
+    }
+
+    .header-title{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .article {
+        position: relative; /* Змінюємо на відносне позиціювання */
+        margin: none;
+        transform: none;
+        left: 0;
+        top: 0;
+    }
+
+    .header-title{
+        text-wrap: wrap;
+        line-height: normal;
+        font-weight: bold;
+        font-size: 24px;
+        border-bottom: solid 1px black;
+        border-top: solid 2px black;
+        border-radius: 0%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .article-text{
+        padding: 19px 1.5vw 50px;
+    }
+}
