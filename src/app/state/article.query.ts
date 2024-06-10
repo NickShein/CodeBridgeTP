@@ -9,11 +9,12 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class ArticleQuery extends QueryEntity<ArticleState, Article> {
   articles$: Observable<Article[]> = this.selectAll();
-
+  isLoading$: Observable<boolean> = this.selectLoading();
 
   constructor(protected override store: ArticleStore) {
     super(store);
   }
+  
 
   getArticleById(articleId: string): Observable<Article| undefined> {
     return this.selectEntity(articleId);

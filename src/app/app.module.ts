@@ -16,6 +16,7 @@ import { ArticlePageComponent } from './pages/article-page/article-page.componen
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightPipe } from './pipes/highlight.pipe';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HighlightPipe } from './pipes/highlight.pipe';
     MatIconModule,
     MatCardModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

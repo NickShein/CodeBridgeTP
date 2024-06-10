@@ -44,7 +44,6 @@ export class NewsService {
         .subscribe((articles) => {
           this.originalArticles = articles; // Зберігаємо оригінальні статті
           this.articleStore.set(articles);
-          this.articleStore.update({ hasLoaded: true });
         });
     }
   }
